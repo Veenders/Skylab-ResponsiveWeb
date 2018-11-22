@@ -17,6 +17,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 0 1em;
+    margin: 0;
     h1{
         color: $primarycolor;
         font-weight: 700;
@@ -30,6 +31,12 @@ header{
         ul ul{
             list-style-type: none;
             display: none;
+        }
+        ul li:hover > ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            flex-grow: 1;
         }
     }
     button{
@@ -71,5 +78,92 @@ header{
 
     img{
         width: 100%;
+    }
+}
+
+.title{
+    background-color: $primarycolor;
+    color: white;
+    padding: 0.25em;
+    margin: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 3em 0.5em;
+    article{
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        padding: 0.5em;
+        margin: 0.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .image{
+        order: -1;
+    }
+    .button{
+        border-radius: 5px;
+        border: 1px solid lightgray;
+        text-decoration: none;
+        color: black;
+        width: 25%;
+        padding: 0.5em;
+        text-align: center;
+        margin-bottom: 0.5em;
+    }
+}
+.features{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $primarycolor;
+    padding: 2em;
+    font-weight: bolder;
+    margin: 0;
+    h1{
+        padding: 0.5em 0;
+        margin: 0;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        line-height: 2em;
+      }
+      
+      ul li:before {
+        content: "\2713\0020";
+      }
+}
+footer{
+    background: black;
+    color: white;
+    display: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 0.5em;
+    ul{
+        display: flex;
+        flex-direction: row;
+        align-content: space-around;
+        justify-content: stretch;
+        flex-grow: 1;
+        align-items: center;
+        list-style-type: none;
+        li{
+            padding: 0 0.5em;
+        }
+    }
+    a{
+        color: white;
+        text-decoration: none;
     }
 }
